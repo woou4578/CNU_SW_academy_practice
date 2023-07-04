@@ -1,0 +1,52 @@
+/* 
+  id는 #으로 클래스는 .으로 선택한다.
+*/
+
+/* * {
+    color: orange;
+} */
+/* li {
+    color: blue;
+} */
+#first-ul {
+    color: darkgray;
+}
+
+.ul-class {
+    color: green;
+}
+
+[href] {
+    color: red;
+}
+
+[href="naver.com"] {
+    color: blue;
+}
+
+h2 {
+    color: brown;
+}
+div {
+    color: blue;
+}
+div h2 {
+    /* color: blue; */
+    /* color: inherit; */
+    color: initial;
+}
+
+a[target="_blank"]::before {
+    /* color:yellowgreen; */
+    content: " (새 창)";
+}
+a:hover {
+    color: violet;
+}
+
+ul li:first-child {
+    color: blue;
+}
+ul li:last-child {
+    color: red;
+}

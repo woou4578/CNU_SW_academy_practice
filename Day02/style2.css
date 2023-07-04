@@ -1,0 +1,20 @@
+/* div .foo {
+    color: red;
+}
+
+.parent > p{
+    color: blue;
+} */
+/* 
+a ~ p{
+    color: red;
+} */
+#bar {
+    color:green !important;
+}
+.foo {
+    color: blue;
+}
+div {
+    color: red;
+}
