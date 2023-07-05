@@ -1,0 +1,25 @@
+div {
+    font-size: 40px;
+    font-family: 'Tahoma', '맑은 고딕', 'sans-serif';
+    
+    /* font-weight: 400;  400이 기본이다. */
+    /* font-weight: 600; */
+    font-weight: 200;
+    color: rgb(0, 0, 255);
+    text-align: center;
+    line-height: 30px; /*단위 없으면 퍼센트와 비슷*/
+
+    /*숫자가 커질 수록 자간이 멀어지고, 음수가 되면 더 붙는다*/
+    letter-spacing: 10px; 
+    background-color: lightgray;
+    background-image: url('./image.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* background를 이용해서 한번에 다 처리도 가능하다. */
+}
+p {
+    /* border는 부모 node 보다 상대적으로 두껍게 표시 */
+    font-weight: bolder;
+}
