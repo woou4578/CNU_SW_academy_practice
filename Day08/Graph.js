@@ -1,3 +1,6 @@
+// js로 그래프 만들기
+
+// 인접 행렬
 const graph1 = Array.from(
     Array(5),
     () => Array(5).fill(false)
@@ -12,6 +15,7 @@ graph1[4][0] = true;
 
 console.log(graph1);
 
+// 인접 리스트
 const graph2 = Array.from(
     Array(5),
     () => []
