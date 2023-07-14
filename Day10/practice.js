@@ -3,23 +3,26 @@
 function double1(arr) {
 	let results = [];
 	for(let i = 0; i < arr.length; i++) {
-		results.push(arr[i]*2);
+		if(typeof arr[i] === 'number') {
+			results.push(arr[i]*2);
+		}		
 	}
 	return results;
 }
 
-console.log(double1([1,2,3]));
+console.log(double1([1,2,3, ' ', undefined, 5, 10]));
 
 
 function double2(arr) {
-	return arr.map(val => val*2);
+	return arr.filter(param => typeof param === 'number')
+		.map(val => val*2);
 }
 
-console.log(double2([1,2,3]));
+console.log(double2([1,2,3, ' ', undefined, 5, 10]));
 
 // document.querySelector('body').innerHTML = double([1,2,3]);
 
-console.clear();
+// console.clear();
 
 const data = [
 	{
@@ -78,4 +81,4 @@ function filterCats2(cats) {
 
 const filteredCatsName2 = filterCats2(data);
 console.log(filteredCatsName2);
-// document.querySelector('body').innerHTML = filterCatsName;
+// document.querySelector('body').innerHTML = filterCatsName2;
