@@ -1,27 +1,10 @@
-const data = [
-    {
-        text: 'JavaScript 공부하기'
-    },
-    {
-        text: '자바스크립트 복습하기'
-    }
-]
+import App from './App.js';
+import { getItem } from './storage.js';
 
-const data1 = [
-    {
-        text: '베이스 연습하기'
-    },
-    {
-        text: '턱걸이 하기'
-    },
-    {
-        text: '공부하기'
-    }
-
-]
+const initialState = getItem('todos', []);
 
 const $app = document.querySelector('.app')
 new App({
     $target: $app,
-    initialState: data
+    initialState
 })
