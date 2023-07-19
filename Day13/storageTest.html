@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <input type="text" id="name">
+        <button id="save">Save</button>
+        <button id="remove">Remove</button>
+
+        <script>
+            // session storage는 탭이 종료되면, 저장된 값이 모두 사라진다.
+            // local storage는 탭이 종료되어도 남아있다.
+            const storedName = sessionStorage.getItem('name') || '';
+            if(storedName) {
+                document.querySelector('#name').value = storedName;
+            }
+            document.querySelector('#save').addEventListener('click', () => {
+                sessionStorage.setItem('name', document.querySelector('#name').value);
+            })
+
+            document.querySelector('#remove').addEventListener('click', () => {
+                sessionStorage.removeItem('name');
+            })
+        </script>
+    </body>
+</html>
