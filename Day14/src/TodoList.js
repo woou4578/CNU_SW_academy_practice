@@ -3,8 +3,6 @@ export default function TodoList ({ $target, initialState, onToggle, onRemove}) 
 
     $target.appendChild($todo)
 
-
-    
     this.state = initialState
 
     this.setState = (nextState) => {
@@ -14,9 +12,16 @@ export default function TodoList ({ $target, initialState, onToggle, onRemove}) 
 
     this.render = () => {
         // event delegation 기법
+        const {isLoading, todos} = this.state
+
+        if(!isLoading && todos.length === 0) {
+            $todo.innerHTML = 'Todo가 없습니다.'
+            return
+        }
+
         $todo.innerHTML = `
             <ul>
-                ${this.state.map(({_id, content, isCompleted}) => `
+                ${todos.map(({_id, content, isCompleted}) => `
                     <li data-id="${_id}" class="todo-item">
                         ${isCompleted ? `<s>${content}</s>` : content}
                         <button class="remove">x</button>
