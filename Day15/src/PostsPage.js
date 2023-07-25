@@ -1,3 +1,4 @@
+import LinkButton from "./LinkButton.js";
 import PostList from "./PostList.js";
 import { request } from "./api.js";
 
@@ -11,18 +12,20 @@ export default function PostsPage({
         initialState: []
     })
 
-    const $newPostButton = document.createElement('button')
-    $newPostButton.textContent = 'New Post'
-    $page.appendChild($newPostButton)
-
-    const fetchPosts = async () => {
+    new LinkButton({
+        $target: $page,
+        initialState: {
+            text: 'New Post',
+            link: '/posts/new'
+        }
+    })
+    this.setState = async () => {
         const posts = await request('/posts');
-
-        postList.setState(posts);
+        postList.setState(posts)
+        this.render()
     }
     
     this.render = async () => {
-        await fetchPosts()
         $target.appendChild($page)
     }
 }
