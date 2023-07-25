@@ -14,3 +14,10 @@ CNU SW 아카데미 개인 실습 (with programmers)
 2. 기업교육(Tmax, ITCEN)
 3. 자료구조 및 알고리즘 학습, 그에 맞는 코딩테스트
 4. 1일 5코딩테스트 이상(in programeers) - 코딩테스트 입문, 다양한 자료구조
+
+### Week03
+1. VanillaJS 학습
+2. 다양한 API 활용한 학습
+3. 기업교육(Tmax, ITCEN)
+4. 전공수업(네트워크_이영석 교수님, AI&DATA_양희철 교수님)
+5. 1일 5코딩테스트 이상(in programeers) - 코딩테스트 입문, 문자열 처리 관련
