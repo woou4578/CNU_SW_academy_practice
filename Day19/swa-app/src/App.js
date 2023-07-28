@@ -2,27 +2,45 @@
 // import './App.css';
 // import Logo from './components/Logo';
 // import Paragraph from './components/Paragraph';
-// import Board from './components/Board';
+import { useState } from 'react';
+import Board from './components/Board';
+import Pagination from './components/Pagination';
 // import Counter from './components/Counter';
-import { useRef } from "react";
-import Input from "./components/Input";
-import AutoCounter from "./components/AutoCounter";
+// import { useRef } from "react";
+// import Input from "./components/Input";
+// import AutoCounter from "./components/AutoCounter";
 
 function App() {
+	const [page, setPage] = useState(0);
+	const articles = new Array(100).fill().map((_, i) => ({
+		id: i,
+		title: `${i}번째 게시물`
+	}));
+
+	const limit = 10;
+	const offset = page * limit;
+
+	return <div>
+		<div>
+			<Pagination defaultPage={0} limit={limit} total={articles.length} onChange={setPage}/>
+			<Board articles={articles.slice(offset, offset+ limit)}/>
+		</div>
+	</div>;
+	
 	// useRef는
 	// 1. DOM에 직접 접근할 때 사용한다.
 	// 2. 지역 변수로 사용할 때 사용한다.
 	// useState는 값이 변경될 때 다시 렌더링을 한다.
 	// useRef는 값이 변경되더라도 다시 렌더링을 하지 않는다.
-	const inputRef = useRef();
+	// const inputRef = useRef();
 
-	return (
-		<div>
-			<Input ref={inputRef} />
-			<button onClick={() => inputRef.current.focus()}>Focus</button>
-			<AutoCounter />
-		</div>
-	);
+	// return (
+	// 	<div>
+	// 		<Input ref={inputRef} />
+	// 		<button onClick={() => inputRef.current.focus()}>Focus</button>
+	// 		<AutoCounter />
+	// 	</div>
+	// );
 
 	// useEffect는 무언가 변화가 있을 때
 	// 감지하여 반응하는 Hook
