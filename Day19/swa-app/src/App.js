@@ -1,38 +1,56 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import './App.css';
 // import Logo from './components/Logo';
 // import Paragraph from './components/Paragraph';
 // import Board from './components/Board';
 // import Counter from './components/Counter';
+import { useRef } from "react";
+import Input from "./components/Input";
+import AutoCounter from "./components/AutoCounter";
 
 function App() {
-	// useEffect는 무언가 변화가 있을 때
-	// 감지하여 반응하는 Hook
-	const [count, setcount] = useState(0);
-
-	useEffect(() => {
-		console.log(`Clicked ${count} times.`);
-	}, [count]);
-
-	// 배열에 아무것도 넣지 않으면, 컴포넌트가 처음으로 로드될 때 실행
-	useEffect(() => {
-		console.log("Component Loaded");
-		const handleScroll = () => {
-			console.log(window.scrollY);
-		};
-
-		document.addEventListener("scroll", handleScroll);
-		// return으로 반환한 함수는 컴포넌트가 제거될때 실행
-		return () => document.removeEventListener("scroll", handleScroll);
-	}, []);
+	// useRef는
+	// 1. DOM에 직접 접근할 때 사용한다.
+	// 2. 지역 변수로 사용할 때 사용한다.
+	// useState는 값이 변경될 때 다시 렌더링을 한다.
+	// useRef는 값이 변경되더라도 다시 렌더링을 하지 않는다.
+	const inputRef = useRef();
 
 	return (
 		<div>
-			<div>You Clicked {count} times.</div>
-			<button onClick={() => setcount(count + 1)}>+</button>
-			<div style={{height:2000}}></div>
+			<Input ref={inputRef} />
+			<button onClick={() => inputRef.current.focus()}>Focus</button>
+			<AutoCounter />
 		</div>
 	);
+
+	// useEffect는 무언가 변화가 있을 때
+	// 감지하여 반응하는 Hook
+	// const [count, setcount] = useState(0);
+
+	// useEffect(() => {
+	// 	console.log(`Clicked ${count} times.`);
+	// }, [count]);
+
+	// 배열에 아무것도 넣지 않으면, 컴포넌트가 처음으로 로드될 때 실행
+	// useEffect(() => {
+	// 	console.log("Component Loaded");
+	// 	const handleScroll = () => {
+	// 		console.log(window.scrollY);
+	// 	};
+
+	// 	document.addEventListener("scroll", handleScroll);
+		// return으로 반환한 함수는 컴포넌트가 제거될때 실행
+	// 	return () => document.removeEventListener("scroll", handleScroll);
+	// }, []);
+
+	// return (
+	// 	<div>
+	// 		<div>You Clicked {count} times.</div>
+	// 		<button onClick={() => setcount(count + 1)}>+</button>
+	// 		<div style={{height:2000}}></div>
+	// 	</div>
+	// );
 
 	// 상태와 이벤트 바인딩
 	// 1. 컴포넌트에서 지역 상태 관리하는 법
