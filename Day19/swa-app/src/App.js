@@ -2,30 +2,52 @@
 // import './App.css';
 // import Logo from './components/Logo';
 // import Paragraph from './components/Paragraph';
-import { useState } from 'react';
-import Board from './components/Board';
-import Pagination from './components/Pagination';
+// import Board from './components/Board';
+// import Pagination from './components/Pagination';
 // import Counter from './components/Counter';
 // import { useRef } from "react";
 // import Input from "./components/Input";
 // import AutoCounter from "./components/AutoCounter";
+// import Box from './components/Box';
+import { useState } from "react";
+import ShowSum from "./components/ShowSum";
 
 function App() {
-	const [page, setPage] = useState(0);
-	const articles = new Array(100).fill().map((_, i) => ({
-		id: i,
-		title: `${i}번째 게시물`
-	}));
-
-	const limit = 10;
-	const offset = page * limit;
+	// useMemo는 최적화를 위해 필요하다.
+	// 1. 함수 컴포넌트는 자신의 상태가 변경될 때 리렌더링된다.
+	// 2. 부모 컴포넌트로 부터 받는 prop이 변경될 때 리렌더링된다.
+	// 3. 부모 컴포넌트의 상태각 변경되면 리렌더링된다.
+	// 만약 연산의 속도가 느린 컴포넌트라면?
+	const [label, setLabel] = useState("Result");
 
 	return <div>
-		<div>
-			<Pagination defaultPage={0} limit={limit} total={articles.length} onChange={setPage}/>
-			<Board articles={articles.slice(offset, offset+ limit)}/>
-		</div>
+		<button onClick={() => setLabel(label+ ":")}>Change Label</button>
+		<ShowSum label={label} n={1000000000}/>
 	</div>;
+	// 스타일링
+	// return (
+	// 	<div>
+	// 		<div css={{ width: 200, height: 100, backgroundColor: "black"}} />
+	// 		<Box bgColor={"red"}/>
+	// 	</div>
+	// );
+	
+	// 페이지네이션
+	// const [page, setPage] = useState(0);
+	// const articles = new Array(100).fill().map((_, i) => ({
+	// 	id: i,
+	// 	title: `${i}번째 게시물`
+	// }));
+
+	// const limit = 10;
+	// const offset = page * limit;
+
+	// return <div>
+	// 	<div>
+	// 		<Pagination defaultPage={0} limit={limit} total={articles.length} onChange={setPage}/>
+	// 		<Board articles={articles.slice(offset, offset+ limit)}/>
+	// 	</div>
+	// </div>;
 	
 	// useRef는
 	// 1. DOM에 직접 접근할 때 사용한다.
