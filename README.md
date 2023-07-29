@@ -10,7 +10,7 @@ CNU SW 아카데미 개인 실습 (with programmers)
 4. 1일 3코딩테스트 이상(in programeers) - 기본 알고리즘, SQL&Oracle
 
 ### Week02
-1. Dom구조 학습
+1. DOM구조 학습
 2. 기업교육(Tmax, ITCEN)
 3. 자료구조 및 알고리즘 학습, 그에 맞는 코딩테스트
 4. 1일 5코딩테스트 이상(in programeers) - 코딩테스트 입문, 다양한 자료구조
@@ -21,3 +21,9 @@ CNU SW 아카데미 개인 실습 (with programmers)
 3. 기업교육(Tmax, ITCEN)
 4. 전공수업(네트워크_이영석 교수님, AI&DATA_양희철 교수님)
 5. 1일 5코딩테스트 이상(in programeers) - 코딩테스트 입문, 문자열 처리 관련
+
+### Week04
+1. VanillaJS 학습
+2. React 맛보기 학습
+3. 전공수업(네트워크_이영석 교수님, AI&DATA_양희철 교수님, OS_김종익 교수님)
+4. 팀 프로젝트 매칭으로 첫 팀 프로젝트 미팅
