@@ -3,24 +3,28 @@
 // import Box from "./components/Box";
 // import { useState, useCallback } from "react";
 // import Checkbox from "./components/Checkbox";
-import Box from "./components/Box";
-import Checkbox from "./components/Checkbox";
-import useHover from "./hooks/useHover";
-import useKeyPress from "./hooks/useKeyPress";
-import useToggle from "./hooks/useToggle";
+// import Box from "./components/Box";
+// import Checkbox from "./components/Checkbox";
+// import useHover from "./hooks/useHover";
+// import useKeyPress from "./hooks/useKeyPress";
+// import useToggle from "./hooks/useToggle";
 
 function App() {
-	const [on, toggle] = useToggle();
-	const [ref, isHover] = useHover();
-	const keyPressed = useKeyPress("a");
+	return <div>
+		
+	</div>;
+	// Custom Hook
+	// const [on, toggle] = useToggle();
+	// const [ref, isHover] = useHover();
+	// const keyPressed = useKeyPress("a");
 
-	return (<div>
-		<Checkbox checked={on} onChange={toggle} />
-		{isHover ? "hover" : "mouseout"}
-		<Box ref={ref} />
+	// return (<div>
+	// 	<Checkbox checked={on} onChange={toggle} />
+	// 	{isHover ? "hover" : "mouseout"}
+	// 	<Box ref={ref} />
 
-		{keyPressed && "Pressed"}
-	</div>);
+	// 	{keyPressed && "Pressed"}
+	// </div>);
 
 	// useCallback
 	// const [foodOn, setFoodOn] = useState(false);
