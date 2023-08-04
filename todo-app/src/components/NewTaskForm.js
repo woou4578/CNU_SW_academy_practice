@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { useTasks } from "../contexts/TaskProvider";
 
 const Form = styled.form`
 	width: 400px;
@@ -29,9 +30,12 @@ const SubmitButton = styled.button`
 
 const NewTaskForm = (props) => {
 	const [task, setTask] = useState("");
+	const { addTask } = useTasks();
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
-        setTask("");
+		addTask(task);
+		setTask("");
 	};
 	return (
 		<Form {...props} onSubmit={handleSubmit}>
@@ -39,8 +43,8 @@ const NewTaskForm = (props) => {
 				type="text"
 				value={task}
 				onChange={(e) => setTask(e.target.value)}
-                required
-            />
+				required
+			/>
 			<SubmitButton>Add</SubmitButton>
 		</Form>
 	);
