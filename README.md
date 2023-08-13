@@ -3,6 +3,7 @@
 2023.07.03 교육 시작
 <br/>
 CNU SW 아카데미 개인 실습 (with programmers)
+
 ### Week01
 1. JavaScrpit, html, css 기본 개념 복습 및 부족한 부분 채우기
 2. 기업 설명회(ITCEN, Tmax, 쎄트렉아이)
@@ -33,3 +34,8 @@ CNU SW 아카데미 개인 실습 (with programmers)
 2. 팀 프로젝트 - 주제 선정, 브레인스토밍
 3. 전공수업(DB_김종익 교수님)
 4. 데이터베이스 이론 개념 복습
+
+### week06
+1. React 학습 - Component, Hook 실습
+2. 팀 프로젝트 - 우선순위 정하기, BE&FE 프로토타입 계획
+3. 전공수업(DB_김종익 교수님, 객체지향프로그래밍_이성호 교수님)
