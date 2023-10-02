@@ -69,3 +69,7 @@ CNU SW 아카데미 개인 실습 (with programmers)
 1. 팀 프로젝트 - FE Router, GPS 관련 학습, 리뷰 페이지 구성
 2. 학교 수업
 3. Tmax 기업 강의 - docker 학습
+
+### Week13
+1. 팀 프로젝트 - ERD 설계, 리뷰 페이지 Figma 작성
+2. 학교 수업
