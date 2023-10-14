@@ -78,3 +78,8 @@ CNU SW 아카데미 개인 실습 (with programmers)
 1. 팀 프로젝트 - 메인 페이지 FE & BE 연결 
 2. 팀 프로젝트 중간 발표
 3. 학교 수업
+
+### Week15
+1. 팀 프로젝트 - 도메인 구매 후 연결, 피드백용 Google Form 작성, Page1 배포
+2. 학교 수업
+3. Tmax 기업 강의 - Linux 학습
