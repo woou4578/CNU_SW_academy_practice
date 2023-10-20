@@ -1,5 +1,9 @@
+import Paint from "./components";
+
 const App = () => {
-	return <div>Paint</div>;
+	return <Paint style={{border: '1px solid black'}}/>
+
+
 };
 
 export default App;
