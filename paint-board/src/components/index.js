@@ -40,6 +40,18 @@ const Paint = ({
 	};
 
 	useEffect(() => {
+		setCurrentLineWidth(lineWidth);
+	}, [lineWidth]);
+
+	useEffect(() => {
+		setCurrentCommand(command);
+	}, [command]);
+
+	useEffect(() => {
+		setCurrentColor(color);
+	}, [color]);
+
+	useEffect(() => {
 		if (!canvasRef.current) return;
 
 		canvasRef.current.width = width * scale;
@@ -110,7 +122,7 @@ const Paint = ({
 			currentCommand,
 			currentColor,
 			currentLineWidth,
-            drawing
+			drawing,
 		]
 	);
 	const handleDrawFinish = useCallback(
@@ -131,7 +143,7 @@ const Paint = ({
 				state: "draw-finished",
 			});
 
-            setDrawing(false);
+			setDrawing(false);
 		},
 		[
 			canvasRef,
@@ -139,6 +151,7 @@ const Paint = ({
 			currentCommand,
 			currentColor,
 			currentLineWidth,
+			drawing,
 		]
 	);
 
