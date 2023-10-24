@@ -83,3 +83,8 @@ CNU SW 아카데미 개인 실습 (with programmers)
 1. 팀 프로젝트 - 도메인 구매 후 연결, 피드백용 Google Form 작성, Page1 배포
 2. 학교 수업
 3. Tmax 기업 강의 - Linux 학습
+
+### Week16
+1. 팀 프로젝트 - 웹 서비스 피드백 반영 후 재배포
+2. 학교 수업
+3. Tmax 기업 강의 - Linux 학습
